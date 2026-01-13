@@ -40,6 +40,7 @@ function draw(e) {
 	});
 	window.addEventListener("mousemove", aim);
 	window.addEventListener("mouseup", loose);
+	window.addEventListener("mousemove", aim);
 	aim(e);
 }
 
@@ -92,7 +93,7 @@ function aim(e) {
 
 }
 
-function loose() {
+/function loose() {
 	// release arrow
 	window.removeEventListener("mousemove", aim);
 	window.removeEventListener("mouseup", loose);
@@ -134,7 +135,7 @@ function loose() {
 	TweenMax.set(".arrow-angle use", {
 		opacity: 0
 	});
-}
+//}
 
 function hitTest(tween) {
 	// check for collisions with arrow and target
@@ -163,10 +164,10 @@ function hitTest(tween) {
 
 }
 
-function onMiss() {
+//function onMiss() {
 	// Damn!
-	showMessage(".miss");
-}
+//	showMessage(".miss");
+//}
 
 function showMessage(selector) {
 	// handle all text animations by providing selector
